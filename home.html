@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div style="display: flex; justify-content: center;">
+		<img src="welcome.jpg" width="300" height="150" style="align-self: center;">
+	</div>
+
+
+	<fieldset style="margin-left: 100px;margin-right: 100px">
+		<legend>Personal information:</legend>
+  
+  	<div class="col-lg-6">
+  		First name:
+	  <h5 id="firstName"></h5><br>
+	  Last name:
+	  <h5 id="lastName"></h5><br>
+	  Gender:
+	  <h5 id="gender"></h5><br>
+	  Phone Number:
+	  <h5 id="number"></h5><br>
+  	</div>
+  	<div class="col-lg-6">
+	  	
+	  
+	  Email:
+	  <h5 id="email"></h5><br>
+	  More Info:
+	  <h5 id="moreInfo"></h5><br>
+	  Nationality:
+	  <h5 id="nation"></h5><br>
+	  Organisation:
+	  <h5 id="orga"></h5><br>
+
+  </div>
+  
+</fieldset>
+<br>
+
+<script>
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+var fn = getParameterByName('firstname');
+var ln = getParameterByName('lastname');
+var number = getParameterByName('phone_number');
+var email = getParameterByName('email');
+var organisation = getParameterByName('organisation');
+var moreInfo = getParameterByName('message');
+var nation = getParameterByName('nationality');
+var gender = getParameterByName('gender');
+
+document.getElementById("firstName").innerHTML = fn;
+document.getElementById("lastName").innerHTML = ln;
+document.getElementById("number").innerHTML = number;
+document.getElementById("gender").innerHTML = gender;
+document.getElementById("email").innerHTML = email;
+document.getElementById("moreInfo").innerHTML = moreInfo;
+document.getElementById("nation").innerHTML = nation;
+document.getElementById("orga").innerHTML = organisation;
+
+</script>
+
+</body>
+</html>

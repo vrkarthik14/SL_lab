@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignUp</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div style="display: flex; justify-content: center;">
+		<img src="signup.png" width="300" height="150" style="align-self: center;">
+	</div>
+<h2 style="padding-left: 100px">General Sign Up form </h2>
+<p style="padding-left: 100px">Please fill this form wih details for signUp</p>
+
+<form action ="home.html" target="_self" method="get" style="padding-left: 100px;padding-right: 100px"> 
+
+	<fieldset >
+		<legend>Contact information:</legend>
+  <div>
+  	<div class="col-lg-6">
+	  	
+	  First name:<br>
+	  <input class="form-control" type="text" name="firstname"><br>
+	  Last name:<br>
+	  <input class="form-control" type="text" name="lastname"><br>
+	  Password<br>
+	  <input class="form-control" type="password" placeholder="Password" name="password" required>
+      <br>
+	  Gender<br>
+	<input type="radio" name="gender" value="male" checked> Male<br>
+	  <input  type="radio" name="gender" value="female"> Female<br>
+
+  </div>
+  <div class="col-lg-6">
+	  	Phone Number:<br>
+	  <input class="form-control" type="number" name="phone_number"><br>
+	  Email:<br>
+	  <input class="form-control" type="email" name="email"><br>
+	  Reenter Password<br>
+	  <input class="form-control" type="password" placeholder="Repeat Password" name="password" required>
+      <br>
+	  Organisation:<br>
+	  <input type="checkbox" name="organisation" value="Government"> Government<br>
+	<input type="checkbox" name="organisation" value="Private" checked> Private<br>
+
+  </div>
+  </div>
+</fieldset>
+<br>
+<br>
+<fieldset>
+    <legend>Additional Information:</legend>
+<div class="col-lg-6">
+	<p>Nationality<br>
+<select class="form-control" name="nationality" multiple style="width: 150px;">
+  <option value="India">India</option>
+  <option value="USA">USA</option>
+  <option value="Brazil">Brazil</option>
+  <option value="UK">UK</option>
+  <option value="Shrilanka">Shrilanka</option>
+  <option value="Pakistan">Pakistan</option>
+</select><br>
+</div>
+<div class="col-lg-6">
+	
+Tell us why you are potential candidate for our activity:<br>
+
+<textarea class="form-control" name="message" rows="4" cols="60	">
+
+</textarea></p>
+
+<br>
+</div>
+<input class="btn btn-primary" type="submit" value="Submit">
+
+</fieldset>
+</form>
+
+</body>
+</html>
